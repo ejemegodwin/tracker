@@ -1,0 +1,202 @@
+.debts {
+  flex: 1;
+  padding: 32px 20px;
+  max-width: 1126px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.debts h1 {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.debt-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.debt-form h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: 0.14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-family: var(--sans);
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+  }
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--sans);
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: var(--shadow);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.btn-paid {
+  padding: 6px 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--sans);
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: var(--shadow);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+  }
+}
+
+.debts-list,
+.paid-debts-list {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.debts-list h2,
+.paid-debts-list h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.debts-list table,
+.paid-debts-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.debts-list thead,
+.paid-debts-list thead {
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.debts-list th,
+.paid-debts-list th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: 0.14px;
+}
+
+.debts-list td,
+.paid-debts-list td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.debts-list tbody tr:hover,
+.paid-debts-list tbody tr:hover {
+  background: var(--code-bg);
+}
+
+.paid-debts-list tbody tr {
+  opacity: 0.7;
+}
+
+.amount {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--text-h);
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text);
+  padding: 32px;
+}
+
+@media (max-width: 1024px) {
+  .debts {
+    padding: 20px 16px;
+  }
+
+  .debts h1 {
+    margin-bottom: 20px;
+  }
+
+  .debt-form,
+  .debts-list,
+  .paid-debts-list {
+    padding: 16px;
+  }
+
+  .debts-list table,
+  .paid-debts-list table {
+    font-size: 12px;
+  }
+
+  .debts-list th,
+  .debts-list td,
+  .paid-debts-list th,
+  .paid-debts-list td {
+    padding: 8px;
+  }
+}

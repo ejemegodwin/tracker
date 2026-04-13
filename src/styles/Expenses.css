@@ -1,0 +1,179 @@
+.expenses {
+  flex: 1;
+  padding: 32px 20px;
+  max-width: 1126px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.expenses h1 {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.expense-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.expense-form h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: 0.14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-family: var(--sans);
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+  }
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--sans);
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: var(--shadow);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.expenses-list {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.expenses-list h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+
+.expenses-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.expenses-list thead {
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.expenses-list th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: 0.14px;
+}
+
+.expenses-list td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.expenses-list tbody tr:hover {
+  background: var(--code-bg);
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.12px;
+}
+
+.amount {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--text-h);
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text);
+  padding: 32px;
+}
+
+@media (max-width: 1024px) {
+  .expenses {
+    padding: 20px 16px;
+  }
+
+  .expenses h1 {
+    margin-bottom: 20px;
+  }
+
+  .expense-form,
+  .expenses-list {
+    padding: 16px;
+  }
+
+  .expenses-list table {
+    font-size: 12px;
+  }
+
+  .expenses-list th,
+  .expenses-list td {
+    padding: 8px;
+  }
+}
